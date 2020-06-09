@@ -1,10 +1,18 @@
 import React from 'react';
-import { TodoListItem } from "./TodoListItem"
+import { TodoListItem } from './TodoListItem' 
 
-export const App = () => {
+const todos: Array <Todo> = [
+  { text:"Walk the dog", complete:true },
+  { text:"Write an app", complete: false }
+];
+
+export const App: React.FC = () => {
   return (
-  <div>Hello world</div>
-  );
+  <React.Fragment>
+  <TodoListItem todo={todos[0]}/>
+  <TodoListItem todo={todos[1]}/>
+  </React.Fragment>
+  )
 }
 
 export default App;
